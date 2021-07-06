@@ -17,7 +17,7 @@ export default function Home(props) {
     const dataReducer = useSelector((state) => state.dataReducer);
     const { todos } = dataReducer;
     const [refreshing, setRefreshing] = useState(false);
-
+    //refreshing the view
     const onRefresh = React.useCallback(() => {
         setRefreshing(true);
         setTimeout(() => {
@@ -25,7 +25,7 @@ export default function Home(props) {
             setRefreshing(false)
         }, 2000);
     }, []);
-
+    //getting data from db
     useEffect(() => getData(), []);
     const getData = () => {
         firestore()
@@ -44,6 +44,7 @@ export default function Home(props) {
                 console.log(todos);
             });
     };
+    //deleting tasks
     const deleteTasks = (data) => {
         console.log(data.item.id)
         firestore()
@@ -59,7 +60,7 @@ export default function Home(props) {
                 );
             });
     };
-
+    //marking tasks done
     const markDoneTask = (data) => {
         console.log(data)
         onPostLike(data.item.id)
@@ -67,6 +68,8 @@ export default function Home(props) {
             .catch(error => console.error(error));
         ;
     };
+    
+    //function to update in db
     function onPostLike(postId) {
         const postReference = firestore().doc(`Todos/${postId}`);
 
