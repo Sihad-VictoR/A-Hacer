@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">A-hacer</string>
+    <string name="facebook_app_id">360866038738826</string>
+    <string name="fb_login_protocol_scheme">fb360866038738826</string>
+</resources>

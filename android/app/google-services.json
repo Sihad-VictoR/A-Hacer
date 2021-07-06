@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "381963610555",
+    "project_id": "a-hacer",
+    "storage_bucket": "a-hacer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381963610555:android:24ace7c4b55291014ebc9e",
+        "android_client_info": {
+          "package_name": "com.firstproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381963610555-cbto1i38hajiptu6heai8t7o1d1krl00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firstproject",
+            "certificate_hash": "336270ac3769dde6e66c21ce34db7e2cc02efabe"
+          }
+        },
+        {
+          "client_id": "381963610555-pg10d0qvko495g021k0ff2siifd5tcqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmpUqd-d96alIMEmefymhLk6KJ-dvYER4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381963610555-pg10d0qvko495g021k0ff2siifd5tcqf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
