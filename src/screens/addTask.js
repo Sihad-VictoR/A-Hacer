@@ -23,6 +23,7 @@ function AddTask({ route, navigation }) {
 
     useEffect(() => {
         const ac = new AbortController();
+        //getting todos from firebase
         Promise.all([
             firestore().collection("assignees").onSnapshot(
                 docs => {
@@ -43,6 +44,8 @@ function AddTask({ route, navigation }) {
     const onFocus = () => {
         console.log("text focused")
     }
+    
+    //method for hiding date picker
     const hideDatePicker = (event, selectedDate) => {
         let currentDate = selectedDate || 'Select Date';
         if (currentDate != 'Select Date') {
@@ -52,9 +55,11 @@ function AddTask({ route, navigation }) {
 
         console.log(img)
     }
+    //method for showing hide picker
     const showDatePicker = () => {
         setVisible(true);
     }
+    //setting assignee and relevant images
     const setSelectedAssignee = (item) => {
         setSAssignee(item);
         if (item == 'Mr.Sachin') {
@@ -68,7 +73,7 @@ function AddTask({ route, navigation }) {
         }
     }
 
-
+    //adding tasks to db or updating it
     const addTaskToDB = async () => {
         if ((selectedAssignee == "Select the Assignee...") || (title == '') || (chosenDate == "Select Date")) {
             alert('Please fill the Form!')
