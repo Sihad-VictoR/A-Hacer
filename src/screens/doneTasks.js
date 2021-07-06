@@ -16,7 +16,7 @@ export default function DoneTasks(props) {
 
     const [donetodos, setDoneTodos] = useState([]);
     const [refreshing, setRefreshing] = useState(false);
-
+    //refreshing the view
     const onRefresh = React.useCallback(() => {
         setRefreshing(true);
         setTimeout(() => {
@@ -24,7 +24,7 @@ export default function DoneTasks(props) {
             setRefreshing(false)
         }, 2000);
     }, []);
-
+    //getting data from db
     useEffect(() => getData(), []);
     const getData = () => {
         firestore()
@@ -44,6 +44,7 @@ export default function DoneTasks(props) {
                 console.log(donetodos);
             });
     };
+    //deleting tasks
     const deleteTasks = (data) => {
         for (var i = 0; i < donetodos.length; i++) {
 
